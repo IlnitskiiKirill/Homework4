@@ -42,36 +42,41 @@ public class Main {
                 System.out.println("Если возраст человека равен " + age + " лет, то ему нужно ходить на работу");
             }
             System.out.println("Задача №5");
-            int childAge = 15;
+            int childAge = 13;
+            boolean adult = true;
             if (childAge < 5) {
-                System.out.println("Если возраст ребёнка равен " + childAge + " лет, то ему нельзя кататься на атракционе");
-            } else if (childAge > 5 && childAge < 14) {
-                System.out.println("Если возраст ребёнка равен " + childAge + " лет, то ему можно кататься на атракционе только в сопровождении взрослого");
-            } else if (childAge > 14) {
-                System.out.println("Если возраст ребёнка равен " + childAge + " лет, то ему можно кататься на атракционе без сопровождении взрослого");
-            }
-            System.out.println("Задача №7");
-            int plasesTrain = 120;
-            if (plasesTrain < 60) {
-                System.out.println("В вагоне поезда есть сидячие места");
-            } else if (plasesTrain >= 60 && plasesTrain < 120) {
-                System.out.println("В вагоне поезда есть только стоячие места");
-            } else if (plasesTrain == 120) {
-                System.out.println("Вагон поезда полностью забит");
-            }
-            System.out.println("Задача №8");
-            int one = 10;
-            int two = 8;
-            int three = 3;
-            if (three > two && three > one) {
-                System.out.println("Число " + three + " больше, чисел " + two + " и " + one);
-            } else if (two > one && two > three) {
-                System.out.println("Число " + two + " больше, чисел " + three + " и " + one);
-            } else if (one > two && one > three) {
-                System.out.println("Число " + one + " больше, чисел " + three + " и " + two);
-            }
+                System.out.println("Если возраст ребёнка меньше " + childAge + " лет, то ему нельзя кататься на атракционе");
+            } else if (childAge >= 5 && childAge < 14) {
+                if  (adult) {
+                    System.out.println("Если возраст ребёнка равен " + childAge + " лет, то ему можно кататься на атракционе только в сопровождении взрослого");
+                } else{
+                    System.out.println("Если возраст ребёнка равен " + childAge + " лет, то ему нельзя кататься на атракционе без сопровождения взрослого");
+                }
+            } else {
+                    System.out.println("Если возраст ребёнка равен " + childAge + " лет, то ему можно кататься на атракционе без сопровождении взрослого");
+                }
+                System.out.println("Задача №7");
+                int plasesTrain = 120;
+                if (plasesTrain < 60) {
+                    System.out.println("В вагоне поезда есть сидячие места");
+                } else if (plasesTrain >= 60 && plasesTrain < 120) {
+                    System.out.println("В вагоне поезда есть только стоячие места");
+                } else if (plasesTrain == 120) {
+                    System.out.println("Вагон поезда полностью забит");
+                }
+                System.out.println("Задача №8");
+                int one = 10;
+                int two = 8;
+                int three = 3;
+                if (three > two && three > one) {
+                    System.out.println("Число " + three + " больше, чисел " + two + " и " + one);
+                } else if (two > one && two > three) {
+                    System.out.println("Число " + two + " больше, чисел " + three + " и " + one);
+                } else if (one > two && one > three) {
+                    System.out.println("Число " + one + " больше, чисел " + three + " и " + two);
+                }
 
 
+            }
         }
     }
-}
